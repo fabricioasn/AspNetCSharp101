@@ -1,0 +1,67 @@
+﻿@model Introduction_CS_MVC.Models.Usuario
+@{
+    ViewBag.Title = "Usuario";
+}
+
+<h2>Usuario</h2>
+
+<h2>User Validation</h2>
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+<fieldset>
+    <legend>Dados do Usuário</legend>
+    <div class="editor-label">
+        @Html.LabelFor(Model => Model.Name)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(Model => Model.Name)
+        @Html.ValidationMessageFor(Model => Model.Name)
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(Model => Model.Observ)
+    </div>
+    <div class="editor-field">
+        @Html.TextAreaFor(Model => Model.Observ)
+        @Html.ValidationMessageFor(Model => Model.Observ)
+    </div>
+    <div class="editor-label">
+        @Html.LabelFor(Model => Model.Age)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(Model => Model.Age)
+        @Html.ValidationMessageFor(Model => Model.Age)
+    </div>
+    <div class="editor-label">
+        @Html.LabelFor(Model => Model.Email)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(Model => Model.Email)
+        @Html.ValidationMessageFor(Model => Model.Email)
+    </div>
+    <div class="editor-label">
+        @Html.LabelFor(Model => Model.Login)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(Model => Model.Login)
+        @Html.ValidationMessageFor(Model => Model.Login)
+    </div>
+    <div class="editor-label">
+        @Html.LabelFor(Model => Model.pswd)
+    </div>
+    <div class="editor-field">
+        @Html.PasswordFor(Model => Model.pswd)
+        @Html.ValidationMessageFor(Model => Model.pswd)
+    </div>
+    <div class="editor-label">
+        @Html.LabelFor(Model => Model.pswdconfirm)
+    </div>
+    <div class="editor-field">
+        @Html.PasswordFor(Model => Model.pswdconfirm)
+        @Html.ValidationMessageFor(Model => Model.pswdconfirm)
+    </div>
+    <p><input type="submit" value="Cadastrar" /></p>
+</fieldset>
+
+}

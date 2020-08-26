@@ -1,0 +1,44 @@
+﻿@model Introduction_CS_MVC.Models.Pessoa 
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Curso de ASP MVC</h2>
+<p>Curso de Asp</p>
+
+
+
+<br />
+<b>Typed View</b>
+
+<p> @Model.PersonID </p>
+<p> @Model.Name </p>
+<p> @Model.Type </p>
+
+<b>Form</b>
+@using(Html.BeginForm("Lista", "Home", FormMethod.Post)) { 
+    <fieldset>
+        <legend>Informações de Pessoas</legend>
+    </fieldset>
+    <div>
+        @Html.LabelFor(var => var.PersonID)
+    </div>
+    <div>
+        @Html.EditorFor(var => var.PersonID)
+    </div>
+
+    <div>
+        @Html.LabelFor(var => var.Name)
+    </div>
+    <div>
+        @Html.EditorFor(var => var.Name)
+    </div>
+
+    <div>
+        @Html.LabelFor(var => var.Type)
+    </div>
+    <div>
+        @Html.EditorFor(var => var.Type)
+    </div>
+    <p><input type="submit" value="Enviar" /></p>
+}

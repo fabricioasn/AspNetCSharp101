@@ -1,0 +1,19 @@
+﻿@model Introduction_CS_MVC.Models.Pessoa
+
+@{
+    ViewBag.Title = "Lista";
+}
+
+<h2>Lista</h2>
+
+
+<div><b>@Html.LabelFor(var => var.PersonID)</b></div>
+<div>@Model.PersonID </div>
+
+<div><b>@Html.LabelFor(var => var.Name)</b> </div>
+<div>@Model.Name </div>
+
+<div><b>@Html.LabelFor(var => var.Type)</b></div>
+<div>@Model.Type </div>
+
+@Html.ActionLink("Voltar", "Index", "home");
