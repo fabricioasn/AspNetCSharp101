@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -15,11 +16,10 @@ namespace MyBank
                 foreach (var item in allTransactions)
                 {
                     balance = balance + item.Amount;
-                }return balance;
+                } return balance;
             }
-                
-                
-                }
+            set { }
+        } 
         private static int accNumStart = 1234567890;
 
         private List<Transaction> allTransactions = new List<Transaction>();
@@ -55,7 +55,19 @@ namespace MyBank
             allTransactions.Add(withdrawal);
         }
 
-
+        //function wich returns the accont all transactions history reported
+        public string GetAccHistory()
+        {
+            //transactions report header
+            var report = new StringBuilder();
+            report.AppendLine("Date\t\tAmount\tNote");
+            foreach(var item in allTransactions)
+            {
+                //report rows
+                report.AppendLine($"{item.Date.ToShortDateString()}\t{item.Amount}\t{item.Notes}");
+            }
+            return report.ToString();
+        }
 
 
     }
