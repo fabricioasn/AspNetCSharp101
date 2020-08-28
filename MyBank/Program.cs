@@ -9,14 +9,15 @@ namespace MyBank
             //abstract Account builder for test
             var abstractAccount = new BankAccount("John",10000);
             Console.WriteLine($"Account {abstractAccount.Number} was created for {abstractAccount.Owner} with {abstractAccount.Balance}.");
-            
+            Boolean test = true;
             //test to verify withdrawal above current balance
             try
             {
                 //test to verify transactions with negative values
                 try
                 {
-                    Boolean test=true;
+                    
+
                     do
                     {
                         Console.WriteLine("Type a Number for the operation do you want to choose:");
@@ -25,7 +26,7 @@ namespace MyBank
                         if (operation == "1")
                         {
                             Console.WriteLine("Type a non negative numeric value: ");
-                            var deposit = Console.Read();
+                            decimal deposit = decimal.Parse(Console.ReadLine());
                             abstractAccount.makeDeposit(deposit, DateTime.Now, "NewDeposit");
                             Console.WriteLine($"New deposit confirmed with {deposit} value!");
 
@@ -33,7 +34,7 @@ namespace MyBank
                         else if (operation == "2")
                         {
                             Console.WriteLine("Type a non negative numeric value lesser than your acc balance: ");
-                            var withdrawal = Console.Read();
+                            decimal withdrawal = decimal.Parse(Console.ReadLine());
                             abstractAccount.makeWithdrawl(withdrawal, DateTime.Now, "NewWithdrawal");
                             Console.WriteLine($"New withdrawal confirmed with {withdrawal} value!");
                         }
@@ -46,7 +47,7 @@ namespace MyBank
 
                         Console.WriteLine("Do you wish to proced with another operation?Type 'Y' for yes:");
                         var proceeds = Console.ReadLine();                        
-                        if (proceeds == "Y")
+                        if (proceeds == "y")
                         {
                             test = true;
                         }
