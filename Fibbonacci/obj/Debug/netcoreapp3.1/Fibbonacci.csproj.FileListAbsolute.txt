@@ -1,0 +1,13 @@
+C:\Users\Fabricio\source\repos\Fibbonacci\bin\Debug\netcoreapp3.1\Fibbonacci.exe
+C:\Users\Fabricio\source\repos\Fibbonacci\bin\Debug\netcoreapp3.1\Fibbonacci.deps.json
+C:\Users\Fabricio\source\repos\Fibbonacci\bin\Debug\netcoreapp3.1\Fibbonacci.runtimeconfig.json
+C:\Users\Fabricio\source\repos\Fibbonacci\bin\Debug\netcoreapp3.1\Fibbonacci.runtimeconfig.dev.json
+C:\Users\Fabricio\source\repos\Fibbonacci\bin\Debug\netcoreapp3.1\Fibbonacci.dll
+C:\Users\Fabricio\source\repos\Fibbonacci\bin\Debug\netcoreapp3.1\Fibbonacci.pdb
+C:\Users\Fabricio\source\repos\Fibbonacci\obj\Debug\netcoreapp3.1\Fibbonacci.csprojAssemblyReference.cache
+C:\Users\Fabricio\source\repos\Fibbonacci\obj\Debug\netcoreapp3.1\Fibbonacci.AssemblyInfoInputs.cache
+C:\Users\Fabricio\source\repos\Fibbonacci\obj\Debug\netcoreapp3.1\Fibbonacci.AssemblyInfo.cs
+C:\Users\Fabricio\source\repos\Fibbonacci\obj\Debug\netcoreapp3.1\Fibbonacci.csproj.CoreCompileInputs.cache
+C:\Users\Fabricio\source\repos\Fibbonacci\obj\Debug\netcoreapp3.1\Fibbonacci.dll
+C:\Users\Fabricio\source\repos\Fibbonacci\obj\Debug\netcoreapp3.1\Fibbonacci.pdb
+C:\Users\Fabricio\source\repos\Fibbonacci\obj\Debug\netcoreapp3.1\Fibbonacci.genruntimeconfig.cache

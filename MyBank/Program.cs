@@ -7,7 +7,7 @@ namespace MyBank
         static void Main(string[] args)
         {
             //abstract Account builder for test
-            var abstractAccount = new BankAccount("John",10000);
+            var abstractAccount = new BankAccount("John", 10000);
             Console.WriteLine($"Account {abstractAccount.Number} was created for {abstractAccount.Owner} with {abstractAccount.Balance}.");
             Boolean test = true;
             //test to verify withdrawal above current balance
@@ -16,7 +16,7 @@ namespace MyBank
                 //test to verify transactions with negative values
                 try
                 {
-                    
+
 
                     do
                     {
@@ -41,12 +41,12 @@ namespace MyBank
                         else
                         {
                             Console.WriteLine(abstractAccount.GetAccHistory());
-                            
+
                         }
                         Console.WriteLine($"Current Balance is: {abstractAccount.Balance}");
 
                         Console.WriteLine("Do you wish to proced with another operation?Type 'Y' for yes:");
-                        var proceeds = Console.ReadLine();                        
+                        var proceeds = Console.ReadLine();
                         if (proceeds == "y")
                         {
                             test = true;
@@ -55,17 +55,18 @@ namespace MyBank
                         {
                             test = false;
                         }
-                    } while (test==true);                                                     
+                    } while (test == true);
 
                 }
-                catch(ArgumentOutOfRangeException e)
+                catch (ArgumentOutOfRangeException e)
                 {
                     Console.WriteLine("Exception caught creating account with negative balance.");
                     Console.WriteLine(e.ToString());
                 }
 
 
-            }catch(InvalidOperationException e)
+            }
+            catch (InvalidOperationException e)
             {
                 Console.WriteLine("Except caught trying to overdraw balance.");
                 Console.WriteLine(e.ToString());

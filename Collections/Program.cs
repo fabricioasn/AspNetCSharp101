@@ -58,7 +58,9 @@ namespace Collections
             {
                 Console.WriteLine($"The name{stringList[indexOf]} is at index {indexOf}");
             }
+            //sort itens of the list
             stringList.Sort();
+            //shows sorted items
             foreach(var sortedNames in stringList)
             {
                 Console.WriteLine($"Hello, {sortedNames.ToUpper()}!");
