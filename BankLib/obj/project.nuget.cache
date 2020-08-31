@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "3VZ9othTgXHcbuOHtT3r7R8IsjH04SD0TSnP2bdlFrLS840wddFrP2aQWUtBGq0NITI03j3OrAxSBjJGOU73rg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Fabricio\\source\\repos\\BankLib\\BankLib.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Fabricio\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Fabricio\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

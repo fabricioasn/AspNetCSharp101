@@ -1,0 +1,5 @@
+C:\Users\Fabricio\source\repos\BankLibrary\bin\Debug\netstandard2.0\BankLibrary.deps.json
+C:\Users\Fabricio\source\repos\BankLibrary\bin\Debug\netstandard2.0\BankLibrary.dll
+C:\Users\Fabricio\source\repos\BankLibrary\obj\Debug\netstandard2.0\BankLibrary.csprojAssemblyReference.cache
+C:\Users\Fabricio\source\repos\BankLibrary\obj\Debug\netstandard2.0\BankLibrary.AssemblyInfoInputs.cache
+C:\Users\Fabricio\source\repos\BankLibrary\obj\Debug\netstandard2.0\BankLibrary.AssemblyInfo.cs

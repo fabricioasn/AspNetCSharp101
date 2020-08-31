@@ -1,7 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-
+/*This class is the model of the bank account in the program
+ *every bank account created is an instance of this
+ *the concrete methods are deposit, withdrawal, and account history of transactions made
+ *each modify methods is referenced by the transaction class, wich instance is added in a collection list
+ */
 namespace MyBank
 {
     class BankAccount

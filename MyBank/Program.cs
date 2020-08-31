@@ -1,4 +1,5 @@
 ﻿using System;
+//Standart complete bank system with the main/average operation options
 
 namespace MyBank
 {
