@@ -1,6 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+/*this class registers the transaction made on program calling the BankAccount transaction methods
+ *each transaction made calls up an object instance of this class
+ *each instance called is puted in an collections list on BankAccount class called my "allTransactions"
+ */
 
 namespace MyBank
 {

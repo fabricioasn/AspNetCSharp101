@@ -1,0 +1,4 @@
+C:\Users\Fabricio\source\repos\BasicBank\obj\Debug\netcoreapp3.1\BasicBank.csprojAssemblyReference.cache
+C:\Users\Fabricio\source\repos\BasicBank\obj\Debug\netcoreapp3.1\BasicBank.AssemblyInfoInputs.cache
+C:\Users\Fabricio\source\repos\BasicBank\obj\Debug\netcoreapp3.1\BasicBank.AssemblyInfo.cs
+C:\Users\Fabricio\source\repos\BasicBank\obj\Debug\netcoreapp3.1\BasicBank.csproj.CoreCompileInputs.cache
