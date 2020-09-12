@@ -1,15 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ShopAPI.Models
 {
+    [Table("User")]
     public class User
     {
         [Key]
+        [Column("User_ID")]
         public int Id { get; set; }
 
         /*business logic wich applies the string field 'Username' an length renge(max,min) 
