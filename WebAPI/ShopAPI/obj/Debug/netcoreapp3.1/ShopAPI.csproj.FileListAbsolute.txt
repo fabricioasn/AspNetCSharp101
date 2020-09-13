@@ -53,8 +53,6 @@ C:\Users\Fabricio\source\repos\WebAPI\ShopAPI\bin\Debug\netcoreapp3.1\ShopAPI.ru
 C:\Users\Fabricio\source\repos\WebAPI\ShopAPI\bin\Debug\netcoreapp3.1\ShopAPI.dll
 C:\Users\Fabricio\source\repos\WebAPI\ShopAPI\bin\Debug\netcoreapp3.1\ShopAPI.pdb
 C:\Users\Fabricio\source\repos\WebAPI\ShopAPI\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
-C:\Users\Fabricio\source\repos\WebAPI\ShopAPI\obj\Debug\netcoreapp3.1\ShopAPI.csproj.CoreCompileInputs.cache
-C:\Users\Fabricio\source\repos\WebAPI\ShopAPI\obj\Debug\netcoreapp3.1\ShopAPI.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Fabricio\source\repos\WebAPI\ShopAPI\obj\Debug\netcoreapp3.1\ShopAPI.dll
 C:\Users\Fabricio\source\repos\WebAPI\ShopAPI\obj\Debug\netcoreapp3.1\ShopAPI.pdb
 C:\Users\Fabricio\source\repos\WebAPI\ShopAPI\obj\Debug\netcoreapp3.1\ShopAPI.genruntimeconfig.cache
@@ -69,3 +67,7 @@ C:\Users\Fabricio\source\repos\WebAPI\ShopAPI\bin\Debug\netcoreapp3.1\Microsoft.
 C:\Users\Fabricio\source\repos\WebAPI\ShopAPI\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
 C:\Users\Fabricio\source\repos\WebAPI\ShopAPI\obj\Debug\netcoreapp3.1\ShopAPI.RazorAssemblyInfo.cache
 C:\Users\Fabricio\source\repos\WebAPI\ShopAPI\obj\Debug\netcoreapp3.1\ShopAPI.RazorAssemblyInfo.cs
+C:\Users\Fabricio\source\repos\WebAPI\ShopAPI\bin\Debug\netcoreapp3.1\Microsoft.OpenApi.dll
+C:\Users\Fabricio\source\repos\WebAPI\ShopAPI\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\Fabricio\source\repos\WebAPI\ShopAPI\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\Fabricio\source\repos\WebAPI\ShopAPI\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll

@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -20,8 +21,17 @@ namespace ShopAPI
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            services.AddMvc(option => option.EnableEndpointRouting = false);
+            services.AddDbContext<DataContextShopDTO>(opts => opts.UseInMemoryDatabase("Database"));
             services.AddScoped<DataContextShopDTO, DataContextShopDTO>();
+            services.AddSwaggerGen(options => {
+                options.SwaggerDoc("v1",
+                    new Microsoft.OpenApi.Models.OpenApiInfo { 
+                    Title = "Swagger API Documentation",
+                    Description = "This is the documentation of the API using swagger dependency " +
+                    "wich generates an API for consumeble REST Web API",
+                    Version = "V1"
+                    });;
+            });
             
         }
 
@@ -31,7 +41,7 @@ namespace ShopAPI
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-                app.UseMvc();
+                
             }
 
             app.UseHttpsRedirection();
@@ -43,6 +53,11 @@ namespace ShopAPI
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
+            });
+            app.UseSwagger();
+            app.UseSwaggerUI(options =>
+            {
+                options.SwaggerEndpoint("swagger/v1/swagger.json", "Swagger API Documentation");
             });
         }
     }
