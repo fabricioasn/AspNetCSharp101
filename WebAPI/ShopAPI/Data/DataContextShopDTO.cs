@@ -20,5 +20,9 @@ namespace ShopAPI.Data
 
         }
 
+        //constructor of dataContext used by the addDataContex to load a DTO in memory
+        public DataContextShopDTO(DbContextOptions<DataContextShopDTO> opts) : base(opts)
+        { }
+
     }
 }

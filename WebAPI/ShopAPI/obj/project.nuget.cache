@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "QB3/csoRIhIcnZBJZCWdCz16muK0dxBWRhyJrzwUhxnk6nHRQ3LcGISeSKbX7K1Vx+OxmvEzQ9wU5U9VJJ7AXw==",
+  "dgSpecHash": "My2syaIqUPFoweuiJMR3jb8cLDsJ0V84m2RcpTMxrUUh2ImS4UIUJ2Q3i5Agvcdvh1+1MwqiWxHp/ga8k5WQFA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Fabricio\\source\\repos\\WebAPI\\ShopAPI\\ShopAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Fabricio\\.nuget\\packages\\microsoft.aspnetcore.antiforgery\\2.2.0\\microsoft.aspnetcore.antiforgery.2.2.0.nupkg.sha512",
+    "C:\\Users\\Fabricio\\.nuget\\packages\\microsoft.aspnetcore.authentication\\2.2.0\\microsoft.aspnetcore.authentication.2.2.0.nupkg.sha512",
     "C:\\Users\\Fabricio\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\Fabricio\\.nuget\\packages\\microsoft.aspnetcore.authentication.core\\2.2.0\\microsoft.aspnetcore.authentication.core.2.2.0.nupkg.sha512",
     "C:\\Users\\Fabricio\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\3.1.8\\microsoft.aspnetcore.authentication.jwtbearer.3.1.8.nupkg.sha512",

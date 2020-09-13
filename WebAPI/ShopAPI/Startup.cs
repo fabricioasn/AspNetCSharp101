@@ -1,9 +1,11 @@
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.IdentityModel.Tokens;
 using ShopAPI.Data;
 
 namespace ShopAPI
@@ -21,7 +23,26 @@ namespace ShopAPI
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            services.AddDbContext<DataContextShopDTO>(opts => opts.UseInMemoryDatabase("Database"));
+
+            var key = System.Text.Encoding.ASCII.GetBytes(Settings.Secret);
+            services.AddAuthentication(a =>
+            {
+                a.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                a.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            }).AddJwtBearer(jwt => {
+                jwt.RequireHttpsMetadata = false;
+                jwt.SaveToken = true;
+                jwt.TokenValidationParameters = new TokenValidationParameters
+                {
+                    ValidateIssuerSigningKey = true,
+                    IssuerSigningKey = new SymmetricSecurityKey(key),
+                    ValidateIssuer = false,
+                    ValidateAudience = false
+                };
+            
+            });
+
+            services.AddDbContext<DataContextShopDTO>(opts => opts.UseSqlServer(Configuration.GetConnectionString("connectionString")));
             services.AddScoped<DataContextShopDTO, DataContextShopDTO>();
             services.AddSwaggerGen(options => {
                 options.SwaggerDoc("v1",
@@ -48,6 +69,7 @@ namespace ShopAPI
 
             app.UseRouting();
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
