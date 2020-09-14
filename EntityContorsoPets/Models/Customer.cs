@@ -21,11 +21,12 @@ namespace EntityContorsoPets.Models
 #nullable disable
         public ICollection<Order> Orders { get; set; }
 
+        /*  */
         public IList<Customer> ListAllProducts()
         {
             try
             {
-
+                /*  */
                 SqlConnection conn = new SqlConnection();
                 conn.ConnectionString = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=EntityContorsoPets;Integrated ecSurity=True; ConnectRetryCount=0";
                 SqlCommand cmd = new SqlCommand();
@@ -33,17 +34,22 @@ namespace EntityContorsoPets.Models
                 cmd.CommandText = "SELECT * FROM dbo.Customers";
                 cmd.Connection = conn;
 
+                /*  */
                 SqlDataReader ER;
                 IList<Customer> listCustomers = new List<Customer>();
 
-                conn.Open();
-                ER = cmd.ExecuteReader();
+                conn.Open(); //
+                ER = cmd.ExecuteReader(); //
+
+                /*  */
                 if (ER.HasRows)
                 {
                     while (ER.Read())
                     {
+                        /*  */
                         Customer customer = new Customer();
 
+                        //all collumns field
                         customer.CustomerId = Convert.ToInt32(ER["ProductID"]);
                         customer.FirstName = Convert.ToString(ER["FirstName"]);
                         customer.LastName = Convert.ToString(ER["LastName"]);
