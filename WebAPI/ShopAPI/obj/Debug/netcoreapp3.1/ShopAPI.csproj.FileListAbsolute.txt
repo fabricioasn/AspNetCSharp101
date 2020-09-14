@@ -72,3 +72,6 @@ C:\Users\Fabricio\source\repos\WebAPI\ShopAPI\bin\Debug\netcoreapp3.1\Swashbuckl
 C:\Users\Fabricio\source\repos\WebAPI\ShopAPI\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\Fabricio\source\repos\WebAPI\ShopAPI\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
 C:\Users\Fabricio\source\repos\WebAPI\ShopAPI\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.InMemory.dll
+C:\Users\Fabricio\source\repos\WebAPI\ShopAPI\obj\Debug\netcoreapp3.1\ShopAPI.csproj.CoreCompileInputs.cache
+C:\Users\Fabricio\source\repos\WebAPI\ShopAPI\obj\Debug\netcoreapp3.1\ShopAPI.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Fabricio\source\repos\WebAPI\ShopAPI\obj\Debug\netcoreapp3.1\ShopAPI.MvcApplicationPartsAssemblyInfo.cache

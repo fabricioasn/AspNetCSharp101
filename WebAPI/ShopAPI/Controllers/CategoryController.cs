@@ -28,6 +28,7 @@ namespace Shop.Controllers
         [HttpGet]
         [Route("")]
         [AllowAnonymous]
+        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public async Task<ActionResult<IEnumerable<Category>>> Get()
         {
             var categories = await _context.Categories.AsNoTracking().ToListAsync();
@@ -106,6 +107,7 @@ namespace Shop.Controllers
         [HttpDelete]
         [Route("")]
         [Authorize(Roles = "manager")] // only the manager has permission to cascade delete a category
+        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public async Task<ActionResult<Category>> DeleteCategory(int id)
         {
             var category = await _context.Categories.FirstOrDefaultAsync(c => c.Id == id);

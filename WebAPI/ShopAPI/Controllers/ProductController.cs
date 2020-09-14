@@ -23,6 +23,7 @@ namespace ShopAPI.Controllers
         [HttpGet]
         [Route("")]
         [AllowAnonymous]
+        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public async Task<ActionResult<List<Product>>> Get()
         {
             var products = await _context.Products.Include(p => p.Category).AsNoTracking().ToListAsync();
@@ -107,6 +108,7 @@ namespace ShopAPI.Controllers
         [HttpDelete]
         [Route("")]
         [Authorize(Roles = "employee")] //any employee role user can delete a product
+        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public async Task<ActionResult<Product>> DeleteProduct(int id)
         {
             var product = await _context.Products.FirstOrDefaultAsync(c => c.ID == id);

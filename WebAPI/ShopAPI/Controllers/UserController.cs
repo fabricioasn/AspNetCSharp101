@@ -24,6 +24,7 @@ namespace ShopAPI.Controllers
         [Route("")]
         [HttpPost]
         [AllowAnonymous]
+        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public async Task<ActionResult<User>> PostUser([FromBody] User user)
         {
             if (!ModelState.IsValid)
@@ -60,6 +61,7 @@ namespace ShopAPI.Controllers
 
             //generates the token to the user submited
             var token = TokenServices.GenerateToken(user);
+            user.Password = "##";
 
             return new
             {
@@ -117,6 +119,7 @@ namespace ShopAPI.Controllers
         [Route("")]
         [HttpDelete]
         [Authorize(Roles ="manager")]
+        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public async Task<ActionResult<User>> DeleteUser(int id)
         {
             var user = await _context.Users.FirstOrDefaultAsync(u => u.Id == id);
