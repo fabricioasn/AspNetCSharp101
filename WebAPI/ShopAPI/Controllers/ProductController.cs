@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
 using System.Collections.Generic;
 using ShopAPI.Models;
 using ShopAPI.Data;
@@ -18,36 +19,39 @@ namespace ShopAPI.Controllers
             _context = context;
         }
 
-        //read products as a list enumerable
-        [Route("")]
+        //read products as a list enumerable        
         [HttpGet]
+        [Route("")]
+        [AllowAnonymous]
         public async Task<ActionResult<List<Product>>> Get()
         {
             var products = await _context.Products.Include(p => p.Category).AsNoTracking().ToListAsync();
             return Ok(products);
         }
 
-        //get a product by ID
-        [Route("{id:int}")]
+        //get a product by ID        
         [HttpGet]
+        [Route("{id:int}")]
+        [AllowAnonymous]
         public async Task<ActionResult<Product>> GetProduct(int id)
         {
             var products = await _context.Products.AsNoTracking().Where(p => p.ID == id).FirstOrDefaultAsync();
             return Ok(products);
         }
 
-        //read products as a list enumerable by category
-        [Route("{id:int}")]
+        //read products as a list enumerable by category        
         [HttpGet]
+        [Route("{id:int}")]
         public async Task<ActionResult<IEnumerable<Product>>> GetProducts(int Id)
         {
             var products = await _context.Products.AsNoTracking().Where(p => p.CategoryID == Id).ToListAsync();
             return Ok(products);
         }
 
-        //create a new product
-        [Route("")]
+        //create a new product        
         [HttpPost]
+        [Route("")]
+        [Authorize(Roles = "employee")]
         public async Task<ActionResult<Product>> PostProduct([FromBody] Product product)
         {
             if (!ModelState.IsValid)
@@ -68,9 +72,10 @@ namespace ShopAPI.Controllers
             }
         }
 
-        //update an existing product
-        [Route("{id:int}")]
+        //update an existing product        
         [HttpPut]
+        [Route("{id:int}")]
+        [Authorize(Roles = "employee")]
         public async Task<ActionResult<Product>> PutProduct(int id, [FromBody] Product product)
         {
             if (id != product.ID)
@@ -98,9 +103,10 @@ namespace ShopAPI.Controllers
             }
         }
 
-        //delete a product in database
-        [Route("")]
+        //delete a product in database        
         [HttpDelete]
+        [Route("")]
+        [Authorize(Roles = "employee")] //any employee role user can delete a product
         public async Task<ActionResult<Product>> DeleteProduct(int id)
         {
             var product = await _context.Products.FirstOrDefaultAsync(c => c.ID == id);
