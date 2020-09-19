@@ -42,6 +42,7 @@
       "frameworks": {
         "netstandard2.0": {
           "dependencies": {
+<<<<<<< HEAD
             "Humanizer": {
               "target": "Package",
               "version": "[2.8.26, )"
@@ -54,6 +55,8 @@
               "target": "Package",
               "version": "[2.8.26, )"
             },
+=======
+>>>>>>> develop
             "NETStandard.Library": {
               "suppressParent": "All",
               "target": "Package",

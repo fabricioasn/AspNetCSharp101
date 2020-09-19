@@ -2,6 +2,7 @@
   "version": 3,
   "targets": {
     ".NETStandard,Version=v2.0": {
+<<<<<<< HEAD
       "Humanizer/2.8.26": {
         "type": "package",
         "dependencies": {
@@ -1215,6 +1216,35 @@
         "logo.png"
       ]
     },
+=======
+      "Microsoft.NETCore.Platforms/1.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard1.0/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/_._": {}
+        }
+      },
+      "NETStandard.Library/2.0.3": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0"
+        },
+        "compile": {
+          "lib/netstandard1.0/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/_._": {}
+        },
+        "build": {
+          "build/netstandard2.0/NETStandard.Library.targets": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+>>>>>>> develop
     "Microsoft.NETCore.Platforms/1.1.0": {
       "sha512": "kz0PEW2lhqygehI/d6XsPCQzD7ff7gUJaVGPVETX611eadGsA3A877GdSlU0LRVMCTH/+P3o2iDTak+S08V2+A==",
       "type": "package",
@@ -1362,9 +1392,12 @@
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
+<<<<<<< HEAD
       "Humanizer >= 2.8.26",
       "Humanizer.Core >= 2.8.26",
       "Humanizer.Core.pt >= 2.8.26",
+=======
+>>>>>>> develop
       "NETStandard.Library >= 2.0.3"
     ]
   },
@@ -1410,6 +1443,7 @@
     "frameworks": {
       "netstandard2.0": {
         "dependencies": {
+<<<<<<< HEAD
           "Humanizer": {
             "target": "Package",
             "version": "[2.8.26, )"
@@ -1422,6 +1456,8 @@
             "target": "Package",
             "version": "[2.8.26, )"
           },
+=======
+>>>>>>> develop
           "NETStandard.Library": {
             "suppressParent": "All",
             "target": "Package",

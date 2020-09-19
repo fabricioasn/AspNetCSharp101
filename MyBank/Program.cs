@@ -7,6 +7,7 @@ namespace MyBank
     {
         static void Main(string[] args)
         {
+<<<<<<< HEAD
             //enters the acc owner's name to the Acc constructor
             Console.WriteLine("What's your Name? ");
             string name = Console.ReadLine();
@@ -16,6 +17,12 @@ namespace MyBank
             Console.WriteLine($"Account {abstractAccount.Number} was created for {abstractAccount.Owner} with {abstractAccount.Balance}.");
             Boolean test = true;
 
+=======
+            //abstract Account builder for test
+            var abstractAccount = new BankAccount("John", 10000);
+            Console.WriteLine($"Account {abstractAccount.Number} was created for {abstractAccount.Owner} with {abstractAccount.Balance}.");
+            Boolean test = true;
+>>>>>>> develop
             //test to verify withdrawal above current balance
             try
             {
@@ -27,8 +34,12 @@ namespace MyBank
                     do
                     {
                         Console.WriteLine("Type a Number for the operation do you want to choose:");
+<<<<<<< HEAD
                         Console.WriteLine($"\t1 - Make Deposit \t\t2 - Make Withdrawal\t" +
                             $"\t 3 - Acc History \t Other - Exit ");
+=======
+                        Console.WriteLine($"\t1 - Make Deposit \t\t2 - Make Withdrawal\t");
+>>>>>>> develop
                         var operation = Console.ReadLine();
                         if (operation == "1")
                         {
@@ -45,15 +56,22 @@ namespace MyBank
                             abstractAccount.makeWithdrawl(withdrawal, DateTime.Now, "NewWithdrawal");
                             Console.WriteLine($"New withdrawal confirmed with {withdrawal} value!");
                         }
+<<<<<<< HEAD
                         else if (operation == "3")
+=======
+                        else
+>>>>>>> develop
                         {
                             Console.WriteLine(abstractAccount.GetAccHistory());
 
                         }
+<<<<<<< HEAD
                         else
                         {
                             Environment.Exit(0);
                         }
+=======
+>>>>>>> develop
                         Console.WriteLine($"Current Balance is: {abstractAccount.Balance}");
 
                         Console.WriteLine("Do you wish to proced with another operation?Type 'Y' for yes:");

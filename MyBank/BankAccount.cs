@@ -16,12 +16,17 @@ namespace MyBank
         {
             //inputs on balance the amount of each transaction
             get
-            {
+            {                
                 decimal balance = 0;
                 foreach (var item in allTransactions)
                 {
+<<<<<<< HEAD
                     /*for each transaction item submited by the user, the balance will be negatively 
                      * or positively increase the amount in transaction*/
+=======
+                /*for each transaction item submited by the user, the balance will be negatively 
+                 * or positively increase the amount in transaction*/
+>>>>>>> develop
                     balance = balance + item.Amount;
                 }
                 return balance;
@@ -86,4 +91,8 @@ namespace MyBank
 
     }
 
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> develop

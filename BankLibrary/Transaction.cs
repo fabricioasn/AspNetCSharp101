@@ -8,12 +8,20 @@ using Humanizer;
  */
 
 namespace BankLibrary
+<<<<<<< HEAD
 {
     class Transaction
     {
         public decimal Amount { get; }
         public string AmountHumanized
         {
+=======
+ {
+    class Transaction
+    {
+        public decimal Amount { get;}        
+        public string AmountHumanized {
+>>>>>>> develop
             //this string atribute returns the amount value in natural human language
             get
             {
@@ -21,7 +29,11 @@ namespace BankLibrary
                 int AmountToWords = decimal.ToInt32(Amount);
                 return AmountToWords.ToWords();
             }
+<<<<<<< HEAD
         }
+=======
+                }
+>>>>>>> develop
         public DateTime Date { get; }
         public string Notes { get; }
 
@@ -36,4 +48,8 @@ namespace BankLibrary
 
 
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> develop

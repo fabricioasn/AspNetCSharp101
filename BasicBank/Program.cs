@@ -1,14 +1,30 @@
+<<<<<<< HEAD
 ﻿using System;
 using BankLibrary;
 /*Basic complete bank system with the main/average operation options
  * This is an output main class wich references the BankLibrary class Library dependence*/
 
 namespace BasicBank
+=======
+﻿using BankLibrary;
+using System;
+using Humanizer;
+
+/* Minimal Bank programing executable only version 
+ * It makes reference to the BankLibrary's .net classlib
+ * It calls the NuGet's Package 'Humanizer', that translates syntax format for human natural language
+ * Nuget packages: Humanizer, Humanizer.core, Humanizer.pt
+ */
+
+namespace BasicBank
+
+>>>>>>> develop
 {
     class Program
     {
         static void Main(string[] args)
         {
+<<<<<<< HEAD
             //enters the acc owner's name to the Acc constructor
             Console.WriteLine("What's your Name? ");
             string name = Console.ReadLine();
@@ -18,6 +34,12 @@ namespace BasicBank
             Console.WriteLine($"Account {abstractAccount.Number} was created for {abstractAccount.Owner} with {abstractAccount.Balance}.");
             Boolean test = true;
 
+=======
+            //abstract Account builder for test
+            var abstractAccount = new BankAccount("John", 10000);
+            Console.WriteLine($"Account {abstractAccount.Number} was created for {abstractAccount.Owner} with {abstractAccount.Balance}.");
+            Boolean test = true;
+>>>>>>> develop
             //test to verify withdrawal above current balance
             try
             {
@@ -29,8 +51,12 @@ namespace BasicBank
                     do
                     {
                         Console.WriteLine("Type a Number for the operation do you want to choose:");
+<<<<<<< HEAD
                         Console.WriteLine($"\t1 - Make Deposit \t\t2 - Make Withdrawal\t" +
                             $"\t 3 - Acc History \t Other - Exit ");
+=======
+                        Console.WriteLine($"\t1 - Make Deposit \t\t2 - Make Withdrawal\t");
+>>>>>>> develop
                         var operation = Console.ReadLine();
                         if (operation == "1")
                         {
@@ -47,15 +73,22 @@ namespace BasicBank
                             abstractAccount.makeWithdrawl(withdrawal, DateTime.Now, "NewWithdrawal");
                             Console.WriteLine($"New withdrawal confirmed with {withdrawal} value!");
                         }
+<<<<<<< HEAD
                         else if (operation == "3")
+=======
+                        else
+>>>>>>> develop
                         {
                             Console.WriteLine(abstractAccount.GetAccHistory());
 
                         }
+<<<<<<< HEAD
                         else
                         {
                             Environment.Exit(0);
                         }
+=======
+>>>>>>> develop
                         Console.WriteLine($"Current Balance is: {abstractAccount.Balance}");
 
                         Console.WriteLine("Do you wish to proced with another operation?Type 'Y' for yes:");
@@ -98,4 +131,8 @@ namespace BasicBank
 
         }
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> develop

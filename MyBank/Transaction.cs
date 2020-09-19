@@ -5,13 +5,16 @@ using System.Text;
  *each transaction made calls up an object instance of this class
  *each instance called is puted in an collections list on BankAccount class called my "allTransactions"
  */
+<<<<<<< HEAD
 
+=======
+>>>>>>> develop
 namespace MyBank
 {
     class Transaction
     {
-        public decimal Amount { get; set; }
-        public DateTime Date { get; set; }
+        public decimal Amount { get; }
+        public DateTime Date { get;}
         public string Notes { get; }
 
         public Transaction(decimal amount, DateTime date, string note)

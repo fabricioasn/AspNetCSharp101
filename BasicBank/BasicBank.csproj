@@ -5,6 +5,7 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+<<<<<<< HEAD
   <ItemGroup>
     <PackageReference Include="Humanizer" Version="2.8.26" />
     <PackageReference Include="Humanizer.Core" Version="2.8.26" />
@@ -15,4 +16,6 @@
     <ProjectReference Include="..\BankLibrary\BankLibrary.csproj" />
   </ItemGroup>
 
+=======
+>>>>>>> develop
 </Project>

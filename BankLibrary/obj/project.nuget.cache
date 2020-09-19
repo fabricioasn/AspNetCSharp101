@@ -1,5 +1,6 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "SR6qLa6vNeAJHzdtkJKfGtz++9Ic/nsqiIzOkp4gHZlA/AkIAvHDjKVQ4pHSxCsVVDNLNw2uzxJ5pNMw21f7Mw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Fabricio\\source\\repos\\BankLibrary\\BankLibrary.csproj",
@@ -50,6 +51,12 @@
     "C:\\Users\\Fabricio\\.nuget\\packages\\humanizer.core.zh-cn\\2.8.26\\humanizer.core.zh-cn.2.8.26.nupkg.sha512",
     "C:\\Users\\Fabricio\\.nuget\\packages\\humanizer.core.zh-hans\\2.8.26\\humanizer.core.zh-hans.2.8.26.nupkg.sha512",
     "C:\\Users\\Fabricio\\.nuget\\packages\\humanizer.core.zh-hant\\2.8.26\\humanizer.core.zh-hant.2.8.26.nupkg.sha512",
+=======
+  "dgSpecHash": "Cql2Pnjb1AVeVE9Z/GXxCIEn/fG9+QM0ouUSbwjI+VfOjNfZ9ubGFw/zY0Pz/IBCOSbOFfckzSXbvD3iMCSj8A==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Fabricio\\source\\repos\\BankLibrary\\BankLibrary.csproj",
+  "expectedPackageFiles": [
+>>>>>>> develop
     "C:\\Users\\Fabricio\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\Fabricio\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
   ],

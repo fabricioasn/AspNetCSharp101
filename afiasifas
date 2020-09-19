@@ -1,0 +1,204 @@
+[1mdiff --cc BankLibrary/BankAccount.cs[m
+[1mindex 52e6c7e,93ff098..0000000[m
+[1m--- a/BankLibrary/BankAccount.cs[m
+[1m+++ b/BankLibrary/BankAccount.cs[m
+[36m@@@ -1,11 -1,13 +1,19 @@@[m
+  ﻿using System;[m
+  using System.Collections.Generic;[m
+  using System.Text;[m
+[32m++<<<<<<< HEAD[m
+[32m++=======[m
+[32m+ using Humanizer;[m
+[32m++>>>>>>> develop[m
+  /*This class is the model of the bank account in the program[m
+   *every bank account created is an instance of this[m
+   *the concrete methods are deposit, withdrawal, and account history of transactions made[m
+   *each modify methods is referenced by the transaction class, wich instance is added in a collection list[m
+   */[m
+[32m++<<<<<<< HEAD[m
+[32m++=======[m
+[32m+ [m
+[32m++>>>>>>> develop[m
+  namespace BankLibrary[m
+  {[m
+      class BankAccount[m
+[36m@@@ -16,12 -18,12 +24,21 @@@[m
+          {[m
+              //inputs on balance the amount of each transaction[m
+              get[m
+[32m++<<<<<<< HEAD[m
+[32m +            {[m
+[32m +                decimal balance = 0;[m
+[32m +                foreach (var item in allTransactions)[m
+[32m +                {[m
+[32m +                    /*for each transaction item submited by the user, the balance will be negatively [m
+[32m +                     * or positively increase the amount in transaction*/[m
+[32m++=======[m
+[32m+             {                [m
+[32m+                 decimal balance = 0;[m
+[32m+                 foreach (var item in allTransactions)[m
+[32m+                 {[m
+[32m+                 /*for each transaction item submited by the user, the balance will be negatively [m
+[32m+                  * or positively increase the amount in transaction*/[m
+[32m++>>>>>>> develop[m
+                      balance = balance + item.Amount;[m
+                  }[m
+                  return balance;[m
+[36m@@@ -38,7 -40,6 +55,10 @@@[m
+              this.Owner = initName;[m
+              this.Number = accNumStart.ToString();[m
+              accNumStart++;[m
+[32m++<<<<<<< HEAD[m
+[32m +            this.Balance = initBalance;[m
+[32m++=======[m
+[32m++>>>>>>> develop[m
+          }[m
+  [m
+          public void makeDeposit(decimal amount, DateTime date, string note)[m
+[36m@@@ -86,4 -87,4 +106,8 @@@[m
+  [m
+      }[m
+  [m
+[31m- }[m
+[32m++<<<<<<< HEAD[m
+[32m++}[m
+[32m++=======[m
+[32m+ }[m
+[32m++>>>>>>> develop[m
+[1mdiff --cc BankLibrary/BankLibrary.csproj[m
+[1mindex ac41725,9f5c4f4..0000000[m
+[1m--- a/BankLibrary/BankLibrary.csproj[m
+[1m+++ b/BankLibrary/BankLibrary.csproj[m
+[36m@@@ -1,13 -1,7 +1,20 @@@[m
+[32m++<<<<<<< HEAD[m
+[32m +﻿<Project Sdk="Microsoft.NET.Sdk">[m
+[32m++=======[m
+[32m+ <Project Sdk="Microsoft.NET.Sdk">[m
+[32m++>>>>>>> develop[m
+  [m
+    <PropertyGroup>[m
+      <TargetFramework>netstandard2.0</TargetFramework>[m
+    </PropertyGroup>[m
+  [m
+[32m++<<<<<<< HEAD[m
+[32m +  <ItemGroup>[m
+[32m +    <PackageReference Include="Humanizer" Version="2.8.26" />[m
+[32m +    <PackageReference Include="Humanizer.Core" Version="2.8.26" />[m
+[32m +    <PackageReference Include="Humanizer.Core.pt" Version="2.8.26" />[m
+[32m +  </ItemGroup>[m
+[32m +[m
+[32m++=======[m
+[32m++>>>>>>> develop[m
+  </Project>[m
+[1mdiff --cc BankLibrary/Transaction.cs[m
+[1mindex d6fc529,3acdd23..0000000[m
+[1m--- a/BankLibrary/Transaction.cs[m
+[1m+++ b/BankLibrary/Transaction.cs[m
+[36m@@@ -8,12 -8,11 +8,20 @@@[m [musing Humanizer[m
+   */[m
+  [m
+  namespace BankLibrary[m
+[32m++<<<<<<< HEAD[m
+[32m +{[m
+[32m +    class Transaction[m
+[32m +    {[m
+[32m +        public decimal Amount { get; }[m
+[32m +        public string AmountHumanized[m
+[32m +        {[m
+[32m++=======[m
+[32m+  {[m
+[32m+     class Transaction[m
+[32m+     {[m
+[32m+         public decimal Amount { get;}        [m
+[32m+         public string AmountHumanized {[m
+[32m++>>>>>>> develop[m
+              //this string atribute returns the amount value in natural human language[m
+              get[m
+              {[m
+[36m@@@ -21,7 -20,7 +29,11 @@@[m
+                  int AmountToWords = decimal.ToInt32(Amount);[m
+                  return AmountToWords.ToWords();[m
+              }[m
+[32m++<<<<<<< HEAD[m
+[32m +        }[m
+[32m++=======[m
+[32m+                 }[m
+[32m++>>>>>>> develop[m
+          public DateTime Date { get; }[m
+          public string Notes { get; }[m
+  [m
+[36m@@@ -36,4 -35,4 +48,8 @@@[m
+  [m
+  [m
+      }[m
+[31m- }[m
+[32m++<<<<<<< HEAD[m
+[32m++}[m
+[32m++=======[m
+[32m+ }[m
+[32m++>>>>>>> develop[m
+[1mdiff --cc BankLibrary/bin/Debug/netstandard2.0/BankLibrary.deps.json[m
+[1mindex c1228df,6a3e580..0000000[m
+[1m--- a/BankLibrary/bin/Debug/netstandard2.0/BankLibrary.deps.json[m
+[1m+++ b/BankLibrary/bin/Debug/netstandard2.0/BankLibrary.deps.json[m
+[36m@@@ -10,7 -10,6 +10,10 @@@[m
+        "BankLibrary/1.0.0": {[m
+          "dependencies": {[m
+            "Humanizer": "2.8.26",[m
+[32m++<<<<<<< HEAD[m
+[32m +          "Humanizer.Core": "2.8.26",[m
+[32m++=======[m
+[32m++>>>>>>> develop[m
+            "Humanizer.Core.pt": "2.8.26",[m
+            "NETStandard.Library": "2.0.3"[m
+          },[m
+[1mdiff --cc BankLibrary/obj/BankLibrary.csproj.nuget.dgspec.json[m
+[1mindex f454c05,13bf6dc..0000000[m
+[1m--- a/BankLibrary/obj/BankLibrary.csproj.nuget.dgspec.json[m
+[1m+++ b/BankLibrary/obj/BankLibrary.csproj.nuget.dgspec.json[m
+[36m@@@ -42,18 -42,6 +42,21 @@@[m
+        "frameworks": {[m
+          "netstandard2.0": {[m
+            "dependencies": {[m
+[32m++<<<<<<< HEAD[m
+[32m +            "Humanizer": {[m
+[32m +              "target": "Package",[m
+[32m +              "version": "[2.8.26, )"[m
+[32m +            },[m
+[32m +            "Humanizer.Core": {[m
+[32m +              "target": "Package",[m
+[32m +              "version": "[2.8.26, )"[m
+[32m +            },[m
+[32m +            "Humanizer.Core.pt": {[m
+[32m +              "target": "Package",[m
+[32m +              "version": "[2.8.26, )"[m
+[32m +            },[m
+[32m++=======[m
+[32m++>>>>>>> develop[m
+              "NETStandard.Library": {[m
+                "suppressParent": "All",[m
+                "target": "Package",[m
+[1mdiff --cc BankLibrary/obj/Debug/netstandard2.0/BankLibrary.assets.cache[m
+[1mindex 6c0cd79,f62c6d0..0000000[m
+Binary files differ
+[1mdiff --cc BankLibrary/obj/Debug/netstandard2.0/BankLibrary.csproj.FileListAbsolute.txt[m
+[1mindex 9d45363,d46eafd..0000000[m
+[1m--- a/BankLibrary/obj/Debug/netstandard2.0/BankLibrary.csproj.FileListAbsolute.txt[m
+[1m+++ b/BankLibrary/obj/Debug/netstandard2.0/BankLibrary.csproj.FileListAbsolute.txt[m
+[36m@@@ -1,9 -1,5 +1,15 @@@[m
+  C:\Users\Fabricio\source\repos\BankLibrary\bin\Debug\netstandard2.0\BankLibrary.deps.json[m
+  C:\Users\Fabricio\source\repos\BankLibrary\bin\Debug\netstandard2.0\BankLibrary.dll[m
+[32m++<<<<<<< HEAD[m
+[32m +C:\Users\Fabricio\source\repos\BankLibrary\bin\Debug\netstandard2.0\BankLibrary.pdb[m
+  C:\Users\Fabricio\source\repos\BankLibrary\obj\Debug\netstandard2.0\BankLibrary.csprojAssemblyReference.cache[m
+  C:\Users\Fabricio\source\repos\BankLibrary\obj\Debug\netstandard2.0\BankLibrary.AssemblyInfoInputs.cache[m
+  C:\Users\Fabricio\source\repos\BankLibrary\obj\Debug\netstandard2.0\BankLibrary.AssemblyInfo.cs[m
+[32m +C:\Users\Fabricio\source\repos\BankLibrary\obj\Debug\netstandard2.0\BankLibrary.csproj.CoreCompileInputs.cache[m
+[32m +C:\Users\Fabricio\source\repos\BankLibrary\obj\Debug\netstandard2.0\BankLibrary.dll[m
+[32m +C:\Users\Fabricio\source\repos\BankLibrary\obj\Debug\netstandard2.0\BankLibrary.pdb[m
+[32m++=======[m
+[32m++C:\Users\Fabricio\source\repos\BankLibrary\obj\Debug\netstandard2.0\BankLibrary.csprojAssemblyReference.cache[m
+[32m++C:\Users\Fabricio\source\repos\BankLibrary\obj\Debug\netstandard2.0\BankLibrary.AssemblyInfoInputs.cache[m
+[32m++C:\Users\Fabricio\source\repos\BankLibrary\obj\Debug\netstandard2.0\BankLibrary.AssemblyInfo.cs[m
+[32m++>>>>>>> develop[m
+[1mdiff --cc BankLibrary/obj/Debug/netstandard2.0/BankLibrary.csprojAssemblyReference.cac

@@ -1,5 +1,6 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "wjpoy0QWFDn2eYncrIUuwarHALo2mRtktiabi7Jh+DW71pA+X+vBJrSR45ox/tHzS4m6c6VHOj3MmBQXeeeXSg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Fabricio\\source\\repos\\BasicBank\\BasicBank.csproj",
@@ -51,5 +52,11 @@
     "C:\\Users\\Fabricio\\.nuget\\packages\\humanizer.core.zh-hans\\2.8.26\\humanizer.core.zh-hans.2.8.26.nupkg.sha512",
     "C:\\Users\\Fabricio\\.nuget\\packages\\humanizer.core.zh-hant\\2.8.26\\humanizer.core.zh-hant.2.8.26.nupkg.sha512"
   ],
+=======
+  "dgSpecHash": "e1SPORNFT/+C2Oifd5gnQik1p+zJPubJ9Ze1j6S4vg8R+xpomTlU9J6vuz2GNvpejAv7JqLUYY1xQKlneMoDyg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Fabricio\\source\\repos\\BasicBank\\BasicBank.csproj",
+  "expectedPackageFiles": [],
+>>>>>>> develop
   "logs": []
 }

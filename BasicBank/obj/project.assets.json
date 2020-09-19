@@ -1,6 +1,7 @@
 {
   "version": 3,
   "targets": {
+<<<<<<< HEAD
     ".NETCoreApp,Version=v3.1": {
       "Humanizer/2.8.26": {
         "type": "package",
@@ -1219,6 +1220,13 @@
       "Humanizer.Core >= 2.8.26",
       "Humanizer.Core.pt >= 2.8.26"
     ]
+=======
+    ".NETCoreApp,Version=v3.1": {}
+  },
+  "libraries": {},
+  "projectFileDependencyGroups": {
+    ".NETCoreApp,Version=v3.1": []
+>>>>>>> develop
   },
   "packageFolders": {
     "C:\\Users\\Fabricio\\.nuget\\packages\\": {},
@@ -1250,11 +1258,15 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+<<<<<<< HEAD
           "projectReferences": {
             "C:\\Users\\Fabricio\\source\\repos\\BankLibrary\\BankLibrary.csproj": {
               "projectPath": "C:\\Users\\Fabricio\\source\\repos\\BankLibrary\\BankLibrary.csproj"
             }
           }
+=======
+          "projectReferences": {}
+>>>>>>> develop
         }
       },
       "warningProperties": {
@@ -1265,6 +1277,7 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
+<<<<<<< HEAD
         "dependencies": {
           "Humanizer": {
             "target": "Package",
@@ -1279,6 +1292,8 @@
             "version": "[2.8.26, )"
           }
         },
+=======
+>>>>>>> develop
         "imports": [
           "net461",
           "net462",

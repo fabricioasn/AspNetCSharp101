@@ -1,11 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+<<<<<<< HEAD
+=======
+using Humanizer;
+>>>>>>> develop
 /*This class is the model of the bank account in the program
  *every bank account created is an instance of this
  *the concrete methods are deposit, withdrawal, and account history of transactions made
  *each modify methods is referenced by the transaction class, wich instance is added in a collection list
  */
+<<<<<<< HEAD
+=======
+
+>>>>>>> develop
 namespace BankLibrary
 {
     class BankAccount
@@ -16,12 +24,21 @@ namespace BankLibrary
         {
             //inputs on balance the amount of each transaction
             get
+<<<<<<< HEAD
             {
                 decimal balance = 0;
                 foreach (var item in allTransactions)
                 {
                     /*for each transaction item submited by the user, the balance will be negatively 
                      * or positively increase the amount in transaction*/
+=======
+            {                
+                decimal balance = 0;
+                foreach (var item in allTransactions)
+                {
+                /*for each transaction item submited by the user, the balance will be negatively 
+                 * or positively increase the amount in transaction*/
+>>>>>>> develop
                     balance = balance + item.Amount;
                 }
                 return balance;
@@ -38,7 +55,10 @@ namespace BankLibrary
             this.Owner = initName;
             this.Number = accNumStart.ToString();
             accNumStart++;
+<<<<<<< HEAD
             this.Balance = initBalance;
+=======
+>>>>>>> develop
         }
 
         public void makeDeposit(decimal amount, DateTime date, string note)
@@ -86,4 +106,8 @@ namespace BankLibrary
 
     }
 
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> develop

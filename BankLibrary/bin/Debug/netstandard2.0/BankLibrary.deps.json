@@ -10,7 +10,10 @@
       "BankLibrary/1.0.0": {
         "dependencies": {
           "Humanizer": "2.8.26",
+<<<<<<< HEAD
           "Humanizer.Core": "2.8.26",
+=======
+>>>>>>> develop
           "Humanizer.Core.pt": "2.8.26",
           "NETStandard.Library": "2.0.3"
         },

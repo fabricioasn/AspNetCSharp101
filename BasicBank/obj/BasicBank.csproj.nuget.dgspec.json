@@ -4,6 +4,7 @@
     "C:\\Users\\Fabricio\\source\\repos\\BasicBank\\BasicBank.csproj": {}
   },
   "projects": {
+<<<<<<< HEAD
     "C:\\Users\\Fabricio\\source\\repos\\BankLibrary\\BankLibrary.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -75,6 +76,8 @@
         }
       }
     },
+=======
+>>>>>>> develop
     "C:\\Users\\Fabricio\\source\\repos\\BasicBank\\BasicBank.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -101,11 +104,15 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
+<<<<<<< HEAD
             "projectReferences": {
               "C:\\Users\\Fabricio\\source\\repos\\BankLibrary\\BankLibrary.csproj": {
                 "projectPath": "C:\\Users\\Fabricio\\source\\repos\\BankLibrary\\BankLibrary.csproj"
               }
             }
+=======
+            "projectReferences": {}
+>>>>>>> develop
           }
         },
         "warningProperties": {
@@ -116,6 +123,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+<<<<<<< HEAD
           "dependencies": {
             "Humanizer": {
               "target": "Package",
@@ -130,6 +138,8 @@
               "version": "[2.8.26, )"
             }
           },
+=======
+>>>>>>> develop
           "imports": [
             "net461",
             "net462",
