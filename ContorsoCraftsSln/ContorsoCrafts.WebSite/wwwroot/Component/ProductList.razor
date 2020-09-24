@@ -1,0 +1,38 @@
+﻿@using Microsoft.AspNetCore.Components.Web
+@using ContorsoCrafts.WebSite.Models;
+@using ContorsoCrafts.WebSite.Services;
+@inject JsonFileProductService ProductService;
+<!-- Razor component wich injects JsonProductList service to frontEnd list products -->
+<!-- Razor component html/css area -->
+<h3>ProductList</h3>
+<div class="card-columns">
+    @foreach (var product in ProductService.GetProducts())
+    {
+        <div class="card">
+            <div class="card-img" style="background-image:url('@product.Image');"></div>
+            <div class="card-body">
+                <h5 class="card-title">@product.Title</h5>
+            </div>
+        </div>
+        <div class="card-footer">
+            <small class="text-muted"></small>
+            <button @onclick="(selprod => SelectProduct(product.Id))" data-toggle="modal"
+                    data-target="#productModal" class="btn btn-primary">
+                More Info about Product
+            </button>
+        </div>
+    }
+</div>
+
+<!-- Razor component Cs asp.net script area-->
+@code {
+    Product selectProduct;
+    string selProdId;
+
+    void SelectProduct(string productId)
+    {
+        //selects the product specified by ID, using getProducts Methods on product services
+        selProdId = productId;
+        selectProduct = ProductService.GetProducts().First(product => product.Id == productId);
+    }
+}
