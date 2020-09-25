@@ -26,6 +26,7 @@
 
   <ItemGroup>
     <Folder Include="Data\Maps\" />
+    <Folder Include="ViewModels\CategoryViewModel\" />
   </ItemGroup>
 
 

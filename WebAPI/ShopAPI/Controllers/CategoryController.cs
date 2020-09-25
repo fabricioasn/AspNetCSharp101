@@ -37,11 +37,11 @@ namespace Shop.Controllers
 
         //get a category by ID    
         [HttpGet]
-        [Route("{id:int}")]
+        [Route("{Id:int}")]
         [AllowAnonymous]
-        public async Task<ActionResult<Category>> GetCategory(int id)
+        public async Task<ActionResult<Category>> GetCategory(int Id)
         {
-            var categories = await _context.Categories.AsNoTracking().Where(c => c.Id == id).FirstOrDefaultAsync();
+            var categories = await _context.Categories.AsNoTracking().Where(c => c.Id == Id).FirstOrDefaultAsync();
             return Ok(categories);
         }
 

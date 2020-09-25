@@ -7,6 +7,7 @@ using Microsoft.EntityFrameworkCore;
 using System.Linq;
 using System.Threading.Tasks;
 using System;
+using ShopAPI.ViewModels.ProductViewModel;
 
 // https://localhost:5001/v1/products local
 // https://myapp.azurewebsites.net azure
@@ -27,9 +28,21 @@ namespace ShopAPI.Controllers
         [Route("")]
         [AllowAnonymous]
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public async Task<ActionResult<List<Product>>> Get()
+        public async Task<ActionResult<List<ProductViewModelList>>> Get()
         {
-            var products = await _context.Products.Include(p => p.Category).AsNoTracking().ToListAsync();
+            var products = await _context.Products
+                .Include(p => p.Category)
+         //View Model List
+                .Select(p => new ProductViewModelList
+                {
+                    ID = p.ID,
+                    Title = p.Title,
+                    Price = p.Price,
+                    Category = p.Category.Title,
+                    CategoryID = p.Category.Id
+                })
+                .AsNoTracking()
+                .ToListAsync();
             return Ok(products);
         }
 
@@ -39,7 +52,9 @@ namespace ShopAPI.Controllers
         [AllowAnonymous]
         public async Task<ActionResult<Product>> GetProduct(int id)
         {
-            var products = await _context.Products.AsNoTracking().Where(p => p.ID == id).FirstOrDefaultAsync();
+            var products = await _context.Products
+                .AsNoTracking()
+                .Where(p => p.ID == id).FirstOrDefaultAsync();
             return Ok(products);
         }
 
